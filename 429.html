@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Whoops</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#1A2B32]">
+
+    <main id="overlay" class="relative bg-[#1A2B32]/60 max-w-xl rounded-md gap-1 items-stretch justify-center overflow-hidden text-white hidden flex-col px-4 py-4 animate-entry">
+        <div class="absolute inset-0 bg-[#1A2B32] w-full h-full animate-loader"></div>
+    </main>
+
+    <main id="default" class="relative bg-[#1A2B32] text-white flex-col items-center justify-center h-dvh hidden">
+        <img src="mad.png" class="relative w-40 z-10" />
+
+        <div class="relative z-10 p-4 bg-[#1A2B32] rounded-md w-full max-w-screen-md prose *:text-white">
+            <h1 class="text-white text-center text-2xl font-bold mb-4"> Meowww, You are being rate limited, try again later </h1>
+            <p id="time" class="text-white text-center text-lg font-bold">Time: </p>
+            <p class="text-white text-center text-lg font-bold">Ray id: ::RAY_ID::</p>
+        </div>
+
+        <div class="absolute inset-0 bg-[#1A2B32] w-full h-full animate-pulse"></div>
+        <div class="absolute left-0 top-0 bg-white w-full h-1 animate-loader z-20"></div>
+
+        <div class="absolute bottom-4 text-white text-center w-full">
+            <a href="https://t.me/rapidreset" target="_blank" class="text-white font-bold">This is error? Pm telegram</a>
+        </div>        
+        
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const day = now.getDate().toString().padStart(2, '0');
+            const month = (now.getMonth() + 1).toString().padStart(2, '0'); 
+            const year = now.getFullYear();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${day}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('time').innerText = `Time: ${timeString}`;
+        }
+        updateTime();
+    </script>
+</body>
+
+</html>

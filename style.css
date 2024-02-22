@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;900&display=swap");
+
+* {
+    font-family: "Nunito", sans-serif;
+}
+
+.animate-loader {
+    animation: loading 10s ease forwards;
+    transform-origin: left;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* Entry-Leave animation will finished before page reload/leave */
+.animate-entry {
+    animation: entry 10s ease forwards;
+}
+
+@keyframes entry {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    5% {
+        transform: translateY(0);
+    }
+
+    95% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; /* Уменьшение размера шрифта для лучшей читаемости на мобильных устройствах */
+    }
+
+    #default img {
+        width: 80%; /* Увеличение ширины изображения на мобильных устройствах */
+    }
+
+    #default .prose {
+        padding: 2rem; /* Увеличение отступов для улучшения читаемости текста на мобильных устройствах */
+    }
+
+    #default .text-lg {
+        font-size: 16px; /* Увеличение размера шрифта для лучшей читаемости текста на мобильных устройствах */
+    }
+}
