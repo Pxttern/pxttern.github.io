@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Whoops</title>
+    <title>Rate Limited - stresser.dog</title>
 
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,19 +22,22 @@
         <img src="mad.png" class="relative w-40 z-10" />
 
         <div class="relative z-10 p-4 bg-[#1A2B32] rounded-md w-full max-w-screen-md prose *:text-white">
-            <h1 class="text-white text-center text-2xl font-bold mb-4"> Meowww, You are being rate limited, try again later </h1>
+            <h1 class="text-white text-center text-2xl font-bold mb-4"> Meowww, You are being rate limited, please try again later </h1>
             <p id="time" class="text-white text-center text-lg font-bold">Time: </p>
+            <p class="text-white text-center text-lg font-bold">Status code: 429</p>
             <p class="text-white text-center text-lg font-bold">Ray id: ::RAY_ID::</p>
+            <p class="text-white text-center text-lg font-bold">Country: ::GEO::</p>
         </div>
 
-        <div class="absolute inset-0 bg-[#1A2B32] w-full h-full animate-pulse"></div>
         <div class="absolute left-0 top-0 bg-white w-full h-1 animate-loader z-20"></div>
 
         <div class="absolute bottom-4 text-white text-center w-full">
-            <a href="https://t.me/rapidreset" target="_blank" class="text-white font-bold">This is error? Pm telegram</a>
-        </div>        
+            <a href="https://t.me/rapidreset" target="_blank" class="text-white font-bold">This is an error? PM on Telegram</a>
+        </div>
         
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="typographies.js"></script>
+
     <script>
         function updateTime() {
             const now = new Date();
